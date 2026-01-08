@@ -17,7 +17,7 @@ const Nav = () => {
             <h1 className="text-4xl max-sm:text-3xl font-bold">KANBAN</h1>
         </div>
 
-        <button className="px-4 py-2 font-bold dark:text-gray-600 text-white" onClick={openModal}>+ Add</button>
+        <button className="px-4 py-2 font-bold dark:text-gray-600 text-white hover:cursor-pointer" onClick={openModal}>+ Add</button>
     </div>
     )
 }
