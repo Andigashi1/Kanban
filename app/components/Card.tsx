@@ -9,7 +9,7 @@ const priorityStyles = {
     high: 'border-red-400'
 }
 
-const Card = ({task, isOverlay = false} : {task: Task, isOverlay: boolean}) => {
+const Card = ({task, isOverlay = false} : {task: Task, isOverlay?: boolean}) => {
 
     const { attributes, listeners, setNodeRef, transform, isDragging } =
     useDraggable({ id: task.id })
