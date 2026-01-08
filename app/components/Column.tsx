@@ -36,7 +36,8 @@ const Column = ({status, tasks} : {status : Status, tasks: Task[]}) => {
                 <p className={`${textColor}`}>{title}</p>
             </span>
 
-            <div ref={setNodeRef} className={`${color} p-2 rounded-lg space-y-3`}>
+            <div ref={setNodeRef} className={`${color} p-2 rounded-lg space-y-3 max-h-[80vh] overflow-y-scroll 
+            [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-white [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:rounded-full`}>
                 {tasks.map(task => (
                     <Card key={task.id} task={task}/>
                 ))}
