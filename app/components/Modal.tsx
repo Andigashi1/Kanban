@@ -33,10 +33,10 @@ const Modal = () => {
     }
 
     return (
-        <div className="fixed inset-0 bg-black/40 flex items-center justify-center backdrop-blur-xs"> 
-            <div className="bg-black p-4 rounded-xl">
+        <div className="fixed inset-0 dark:bg-black/40 flex items-center justify-center backdrop-blur-xs"> 
+            <div className="bg-background text-foreground p-4 rounded-xl space-y-4">
                 <h2 className="text-4xl font-bold">Add a new task</h2>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="space-y-4">
                     <input 
                     type="text" 
                     placeholder="Insert title"
@@ -52,6 +52,7 @@ const Modal = () => {
 
                     <select 
                     value={priority}
+                    className="p-1 *:text-black"
                     onChange={e => setPriority(e.target.value as Priority)}>
                         <option value="low">Low</option>
                         <option value="medium">Medium</option>
